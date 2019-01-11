@@ -1,6 +1,6 @@
 # iOS 激光扫地机 SDK 使用说明文档
 
-##功能概述
+## 功能概述
 
 涂鸦智能 iOS 激光扫地机 SDK  在[涂鸦智能 iOS SDK](https://github.com/TuyaInc/tuyasmart_home_ios_sdk) （下文简介为: Home SDK）的基础上提供了接入激光扫地机功能接口封装，加速开发过程。主要包括了以下功能：
 

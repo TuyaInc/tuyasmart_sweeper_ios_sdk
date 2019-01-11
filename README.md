@@ -27,7 +27,7 @@ platform :ios, '8.0'
 
 target 'your_target_name' do
 
-   pod "TuyaSmartSweeperKit", :git => "https://github.com/TuyaInc/tuyasmart_sweeper_sdk.git"
+   pod "TuyaSmartSweeperKit", :git => "https://github.com/TuyaInc/tuyasmart_sweeper_ios_sdk.git"
    
 end
 ```

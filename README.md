@@ -59,6 +59,8 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
     if (!_sweeper) {
         _sweeper = [[TuyaSmartSweeper alloc] init];
         _sweeper.delegate = self;
+        // 设置自动下载文件数据
+        _sweeper.shouldAutoDownloadData = YES;
     }
     
     return _sweeper;
@@ -75,8 +77,8 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
  @param mapType (0表示路径，1表示地图)
  @param mapPath 文件路径
  */
-- (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId mapType:(NSInteger)mapType mapPath:(NSString *)mapPath {
-    NSLog(@"💐 sweeper didReciveDataWithDevId: %@  --- mapType: %ld --- mapPath: %@", devId, mapType, mapPath);
+- (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId mapType:(NSInteger)mapType mapData:(NSData *)mapData error:(NSError *)error {
+    NSLog(@"data %@  ---  error: %@", mapData, error);
 }
 ```
 

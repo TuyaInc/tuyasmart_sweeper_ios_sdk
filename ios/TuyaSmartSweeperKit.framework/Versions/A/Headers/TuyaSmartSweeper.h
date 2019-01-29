@@ -23,10 +23,30 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId mapType:(NSInteger)mapType mapPath:(NSString *)mapPath;
 
+/**
+ 扫地机数据通道的地图数据回调
+
+ 需要提前设置 `shouldAutoDownloadData` = YES, 会自动根据返回的地图 url 请求下载数据
+ 
+ @param sweeper 扫地机
+ @param devId 对应数据所属设备 Id
+ @param mapType (0表示路径，1表示地图)
+ @param mapData 地图数据
+ @param error error
+ */
+- (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId mapType:(NSInteger)mapType mapData:(NSData *)mapData error:(NSError *)error;
+
+
 @end
 
 
 @interface TuyaSmartSweeper : NSObject
+
+
+/**
+ 是否自动下载地图文件数据
+ */
+@property (nonatomic, assign) BOOL shouldAutoDownloadData;
 
 @property (nonatomic, weak) id<TuyaSmartSweeperDelegate> delegate;
 

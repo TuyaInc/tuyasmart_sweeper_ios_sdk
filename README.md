@@ -75,7 +75,8 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
  @param sweeper sweeper
  @param devId 对应数据所属设备 Id
  @param mapType (0表示路径，1表示地图)
- @param mapPath 文件路径
+ @param mapData 地图数据
+ @param error error
  */
 - (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId mapType:(NSInteger)mapType mapData:(NSData *)mapData error:(NSError *)error {
     NSLog(@"data %@  ---  error: %@", mapData, error);

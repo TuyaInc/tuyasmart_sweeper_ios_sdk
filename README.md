@@ -74,7 +74,7 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
  
  @param sweeper sweeper
  @param devId 对应数据所属设备 Id
- @param mapType (0表示路径，1表示地图)
+ @param mapType (0表示地图，1表示路径)
  @param mapData 地图数据
  @param error error
  */
@@ -167,6 +167,10 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 @interface TuyaSmartSweeperHistoryModel : NSObject
 
 /**
+ 文件 id
+ */
+@property (copy, nonatomic) NSString *fileId;
+/**
  时间戳
  */
 @property (assign, nonatomic) long time;
@@ -188,3 +192,57 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 @end
 ```
+
+
+
+### 获取数据内容
+
+备注：oss 错误分析：https://help.aliyun.com/document_detail/32005.html?spm=a2c4g.11186623.6.1328.609b28126VcNPW
+
+```objective-c
+/**
+ 获取数据内容
+
+ @param bucket 文件存储的bucket
+ @param path 文件路径
+ @param complete 数据回调
+ */
+- (void)getSweeperDataWithBucket:(NSString *)bucket
+                            path:(NSString *)path
+                        complete:(void(^)(NSData *data, NSError * _Nullable error))complete;
+```
+
+
+
+### 获取实时的地图存储路径和路径存储路径
+
+根据 `devId` 查询当前设备的实时地图/路径文件地址，获取到的路径通过 `[- (void)getSweeperDataWithBucket:]` 方法下载完整数据。
+
+```objective-c
+/**
+ 获取实时的地图存储路径和路径存储路径
+
+ @param devId 设备 id
+ @param complete 结果回调
+ */
+- (void)getSweeperCurrentPathWithDevId:(NSString *)devId
+                              complete:(void(^)(NSString *mapPath, NSString *routePath, NSError * _Nullable error))complete;
+```
+
+
+
+### 删除扫地机历史记录
+
+```objective-c
+/**
+ 删除扫地机历史记录
+
+ @param devId 设备 id
+ @param fileIds 文件 id 数组
+ @param complete 结果回调
+ */
+- (void)removeSweeperHistoryDataWithDevId:(NSString *)devId
+                                  fileIds:(NSArray<NSString *> *)fileIds
+                                 complete:(void (^)(NSError * _Nullable error))complete;
+```
+

@@ -1,0 +1,58 @@
+
+#
+# TUYA iOS 仓库忽略配置清单
+#
+
+# OS X Finder 
+.DS_Store
+.hgignore
+
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcuserstate
+xcuserdata
+*.xccheckout
+*.pyc
+DerivedData
+
+# Build products
+
+# 目前也加入版本控制，后期可能会有一些代码检测工具
+# builds/
+
+*.o
+*.LinkFileList
+*.hmap
+*.vscode
+
+# output
+Output/*  
+
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
+
+# Cocoapods 
+# 目前我们加入版本控制
+# Pods
+
+# Carthage
+# 目前我们加入版本控制
+# Carthage
+
+# AppCode specific files
+.idea/
+*.iml
+
+# rn 环境
+ReactComponent/node_modules/
+
+# 后面按需补充 ...

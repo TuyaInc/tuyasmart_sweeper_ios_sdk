@@ -246,3 +246,23 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
                                  complete:(void (^)(NSError * _Nullable error))complete;
 ```
 
+
+
+### 升级信息 
+
+**0.1.3 -> 0.1.4**
+
+- [x] [修改] : TuyaSmartSweeperDelegate 代理方法只返回当前初始化时传入的 devId 对应的设备接受到的 MQTT消息
+- [x] [新增] : - (void)getSweeperDataWithBucket: 根据 bucket 和 path 下载文件，complete 回调 下载内容
+- [x] [新增] : - (void)getSweeperDataWithBucket: 解析 OSS 错误信息，并返回 NSError
+- [x] [新增] : - (void)getSweeperCurrentPathWithDevId: 获取实时的地图/路径的文件路径
+- [x] [新增] : - (void)removeSweeperHistoryDataWithDevId: 删除扫地机历史记录
+
+**0.1.4 -> 0.1.5**
+
+- [x] [修改] : 获取历史记录接口调整，会根据所属家庭的纬度区分
+
+**0.1.5 -> 0.1.6**
+
+- [x] [新增] : 分享设备支持查看历史记录
+

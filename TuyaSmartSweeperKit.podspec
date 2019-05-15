@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     s.vendored_frameworks = 'ios/*.framework'
     
-    s.dependency 'TuyaSmartDeviceKit'
+    s.dependency 'TuyaSmartDeviceKit', '~> 2.8.43'
 end

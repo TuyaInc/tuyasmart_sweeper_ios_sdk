@@ -286,3 +286,8 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 - [x] [修改] : 支持 bitcode
 - [x] [修改] : `- (void)getSweeperCurrentPathWithDevId:` 更新云配置的逻辑
 - [x] [新增] : `- (void)removeSweeperAllFileWithDevId:` 更新云配置的逻辑
+
+**0.1.7 -> 0.2.0**
+
+- [x] [废弃] : `-[TuyaSmartSweeperDelegate sweeper:didReciveDataWithDevId:mapType:mapPath:]` 接收激光数据通道消息
+- [x] [新增] : `-[TuyaSmartSweeperDelegate sweeper:didReciveDataWithDevId:mapData:]` 接收激光数据通道消息

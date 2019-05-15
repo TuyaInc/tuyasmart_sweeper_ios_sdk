@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class TuyaSmartSweeper;
 @protocol TuyaSmartSweeperDelegate <NSObject>
-
+@optional
 /**
  扫地机数据通道的文件信息回调
  
@@ -21,7 +21,16 @@ NS_ASSUME_NONNULL_BEGIN
  @param mapType (0表示地图，1表示路径)
  @param mapPath 文件路径
  */
-- (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId mapType:(NSInteger)mapType mapPath:(NSString *)mapPath;
+- (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId mapType:(NSInteger)mapType mapPath:(NSString *)mapPath __deprecated_msg("This method is deprecated, Use -[TuyaSmartSweeperDelegate sweeper:didReciveDataWithDevId:message:] instead");
+
+/**
+ 扫地机数据通道的文件信息回调
+ 
+ @param sweeper sweeper
+ @param devId 对应数据所属设备 Id
+ @param message MQTT消息体
+ */
+- (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId message:(NSDictionary *)message;
 
 /**
  扫地机数据通道的地图数据回调

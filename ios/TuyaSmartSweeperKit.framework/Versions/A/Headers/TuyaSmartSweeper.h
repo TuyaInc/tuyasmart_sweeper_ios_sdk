@@ -144,6 +144,15 @@ NS_ASSUME_NONNULL_BEGIN
                                   fileIds:(NSArray<NSString *> *)fileIds
                                  complete:(void (^)(NSError * _Nullable error))complete;
 
+/**
+ 删除当前扫地机所有历史记录
+
+ @param devId 设备 id
+ @param complete 结果回调
+ */
+- (void)removeAllHistoryDataWithDevId:(NSString *)devId
+                             complete:(void (^)(NSError * _Nullable error))complete;
+
 
 @end
 

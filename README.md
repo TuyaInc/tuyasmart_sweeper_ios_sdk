@@ -248,6 +248,21 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 
 
+### 删除全部历史记录
+
+```objective-c
+/**
+ 删除当前扫地机所有历史记录
+
+ @param devId 设备 id
+ @param complete 结果回调
+ */
+- (void)removeAllHistoryDataWithDevId:(NSString *)devId
+                             complete:(void (^)(NSError * _Nullable error))complete;
+```
+
+
+
 ### 升级信息 
 
 **0.1.3 -> 0.1.4**
@@ -266,3 +281,8 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 - [x] [新增] : 分享设备支持查看历史记录
 
+**0.1.6 -> 0.1.7**
+
+- [x] [修改] : 支持 bitcode
+- [x] [修改] : `- (void)getSweeperCurrentPathWithDevId:` 更新云配置的逻辑
+- [x] [新增] : `- (void)removeSweeperAllFileWithDevId:` 更新云配置的逻辑

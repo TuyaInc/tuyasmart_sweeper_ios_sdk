@@ -27,7 +27,7 @@ platform :ios, '8.0'
 
 target 'your_target_name' do
 
-   pod "TuyaSmartSweeperKit", :git => "https://github.com/TuyaInc/tuyasmart_sweeper_ios_sdk.git"
+   pod 'TuyaSmartSweeperKit'
    
 end
 ```
@@ -283,11 +283,15 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 **0.1.6 -> 0.1.7**
 
+依赖版本 pod 'TuyaSmartDeviceKit', '~> 2.8.43'
+
 - [x] [修改] : 支持 bitcode
 - [x] [修改] : `- (void)getSweeperCurrentPathWithDevId:` 更新云配置的逻辑
 - [x] [新增] : `- (void)removeAllHistoryDataWithDevId:` 清空当前扫地机历史记录
 
 **0.1.7 -> 0.2.0**
+
+依赖版本 pod 'TuyaSmartDeviceKit', '~> 2.10.96'
 
 - [x] [废弃] : `-[TuyaSmartSweeperDelegate sweeper:didReciveDataWithDevId:mapType:mapPath:]` 接收激光数据通道消息
 - [x] [新增] : `-[TuyaSmartSweeperDelegate sweeper:didReciveDataWithDevId:mapData:]` 接收激光数据通道消息

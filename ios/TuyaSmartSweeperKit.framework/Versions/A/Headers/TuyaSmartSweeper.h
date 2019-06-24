@@ -162,7 +162,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllHistoryDataWithDevId:(NSString *)devId
                              complete:(void (^)(NSError * _Nullable error))complete;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

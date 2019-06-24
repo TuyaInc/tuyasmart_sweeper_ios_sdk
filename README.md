@@ -295,3 +295,9 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 - [x] [废弃] : `-[TuyaSmartSweeperDelegate sweeper:didReciveDataWithDevId:mapType:mapPath:]` 接收激光数据通道消息
 - [x] [新增] : `-[TuyaSmartSweeperDelegate sweeper:didReciveDataWithDevId:mapData:]` 接收激光数据通道消息
+
+**0.2.0 -> 1.0.4**
+
+依赖最新版本的 TuyaSmartDeviceKit
+
+- [x] [bugfix] : Sweeper 对象销毁时，移除 delegate

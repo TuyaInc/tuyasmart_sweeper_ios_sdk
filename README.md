@@ -301,3 +301,9 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 依赖最新版本的 TuyaSmartDeviceKit
 
 - [x] [bugfix] : Sweeper 对象销毁时，移除 delegate
+
+**1.0.4 -> 1.0.5**
+
+依赖最新版本的 TuyaSmartDeviceKit
+
+- [x] [bugfix] : 修复偶现崩溃问题

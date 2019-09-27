@@ -307,3 +307,9 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 依赖最新版本的 TuyaSmartDeviceKit
 
 - [x] [bugfix] : 修复偶现崩溃问题
+
+**1.0.5 -> 1.0.6**
+
+依赖最新版本的 TuyaSmartDeviceKit
+
+- [x] [bugfix] : 去除 log 

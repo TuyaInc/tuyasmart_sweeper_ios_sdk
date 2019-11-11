@@ -7,6 +7,7 @@
 - 扫地机记录数据文件云配置转化
 - 扫地机实时清扫记录获取
 - 扫地机历史清扫记录获取
+- 扫地机语音下载服务
 
 
 
@@ -41,7 +42,7 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 在需要使用的地方添加
 
 ```objective-c
-#import <TuyaSmartSweeperKit/TuyaSmartSweeper.h>
+#import <TuyaSmartSweeperKit/TuyaSmartSweeperKit.h>
 ```
 
 
@@ -263,6 +264,197 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 
 
+## 语音下载服务
+
+### 功能说明
+
+主要功能类为 `TuyaSmartFileDownload`，实现 `TuyaSmartFileDownloadDelegate` 来接收语音下载过程中的状态变化回调以及下载进度回调
+
+```objective-c
+- (TuyaSmartFileDownload *)fileDownloader {
+    if (!_fileDownloader) {
+        _fileDownloader = [TuyaSmartFileDownload fileDownloadWithDeviceId:@"<#devId#>"];
+        _fileDownloader.delegate = self;
+    }
+    return _fileDownloader;
+}
+
+
+#pragma mark - TuyaSmartFileDownloadDelegate
+/**
+ 文件下载状态
+
+ @param fileDownload instance
+ @param type 文件类型
+ @param status 状态
+ */
+- (void)fileDownloadUpgrade:(TuyaSmartFileDownload *)fileDownload type:(NSString *)type status:(TuyaSmartFileDownloadStatus)status {
+    NSLog(@"[LOG] %s: %@ status:%@", __PRETTY_FUNCTION__, type, @(status));
+}
+
+/**
+ 文件下载进度
+
+ @param fileDownload instance
+ @param type 文件类型
+ @param progress 下载进度
+ */
+- (void)fileDownloadUpgrade:(TuyaSmartFileDownload *)fileDownload type:(NSString *)type progress:(int)progress {
+    NSLog(@"[LOG] %s: %@ status:%@", __PRETTY_FUNCTION__, type, @(progress));
+}
+```
+
+
+### 下载流程
+
+![image2](./imgs/img2.png)
+
+### 获取下载信息
+
+```objective-c
+/**
+ 获取文件信息
+ 
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)getFileDownloadInfoWithSuccess:(nullable void (^)(NSArray<TuyaSmartFileDownloadModel *> *upgradeFileList))success
+                               failure:(nullable TYFailureError)failure;
+```
+
+
+
+### 请求下载文件指令，设备开始下载文件
+
+```objective-c
+/**
+ 下发下载文件指令，设备开始下载文件, 升级成功或失败会通过 TuyaSmartFileDownloadDelegate 返回
+ 
+ @param fileId  fileId of `TuyaSmartFileDownloadModel`
+ @param success 成功回调 (status 0：未下载  1：下载中)
+ @param failure 失败回调
+ */
+- (void)downloadFileWithFileId:(NSString *)fileId
+                       success:(nullable TYSuccessID)success
+                       failure:(nullable TYFailureError)failure;
+```
+
+
+
+### 获取文件下载进度
+
+```objective-c
+/**
+ 获取文件下载进度
+ 
+ @param success 成功回调
+ @param failure 失败回调
+ */
+- (void)getFileDownloadRateWithSuccess:(nullable void (^)(TuyaSmartFileDownloadRateModel *rateModel))success
+                               failure:(nullable TYFailureError)failure;
+```
+
+
+
+### 下载信息回调
+
+下发下载指令之后，设备开始下载，并且会通过 mqtt 将实时信息上报回来，通过下面这个代理方法可以接受设备下载的实时状态回调：
+
+```objective-c
+/**
+ 文件下载状态
+
+ @param fileDownload instance
+ @param type 文件类型
+ @param status 状态
+ */
+- (void)fileDownloadUpgrade:(TuyaSmartFileDownload *)fileDownload type:(NSString *)type status:(TuyaSmartFileDownloadStatus)status;
+
+```
+
+根据上面的代理方法中的  `(TuyaSmartFileDownloadStatus)status` 来判断，若 `status` 的值为 `TuyaSmartFileDownloadStatusUpgrading`, 则触发该代理方法，获取下载进度
+
+```objective-c
+/**
+ 文件下载进度
+
+ @param fileDownload instance
+ @param type 文件类型
+ @param progress 下载进度
+ */
+- (void)fileDownloadUpgrade:(TuyaSmartFileDownload *)fileDownload type:(NSString *)type progress:(int)progress;
+```
+
+
+### 下载文件数据模型
+
+```objective-c
+@interface TuyaSmartFileDownloadModel : NSObject
+
+/**
+ 文件 id
+ */
+@property (copy, nonatomic) NSString *fileId;
+/**
+ 产品 id
+ */
+@property (copy, nonatomic) NSString *productId;
+/**
+ 文件名称
+ */
+@property (copy, nonatomic) NSString *name;
+/**
+ 文件描述
+ */
+@property (copy, nonatomic) NSString *desc;
+/**
+ 文件url
+ */
+@property (copy, nonatomic) NSString *auditionUrl;
+/**
+ 正式文件url
+ */
+@property (copy, nonatomic) NSString *officialUrl;
+/**
+ 文件图标url
+ */
+@property (copy, nonatomic) NSString *imgUrl;
+/**
+ 区域码
+ */
+@property (strong, nonatomic) NSArray<NSString *> *region;
+
+@end
+```
+
+
+### 下载文件的进度数据模型
+
+```objective-c
+@interface TuyaSmartFileDownloadRateModel : NSObject
+
+/**
+ 下载文件 id
+ */
+@property (copy, nonatomic) NSString *fileId;
+/**
+ 设备 id
+ */
+@property (copy, nonatomic) NSString *deviceId;
+/**
+ 下载状态 0：未下载  1：下载中
+ */
+@property (assign, nonatomic) NSInteger status;
+/**
+ 下载进度
+ */
+@property (assign, nonatomic) int rate;
+
+@end
+```
+
+
+
 ### 升级信息 
 
 **0.1.3 -> 0.1.4**
@@ -313,3 +505,8 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 依赖最新版本的 TuyaSmartDeviceKit
 
 - [x] [bugfix] : 去除 log 
+
+**1.0.6 -> 1.0.7** 
+
+- [x] [新增] : 语音下载服务 `TuyaSmartFileDownload` 
+- [x] [bugfix] : 修复 `-[TuyaSmartSweeper sweeper:didReciveDataWithDevId:]` 回调当前设备的数据 

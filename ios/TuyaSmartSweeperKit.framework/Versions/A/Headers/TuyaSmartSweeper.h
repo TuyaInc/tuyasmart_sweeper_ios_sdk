@@ -6,9 +6,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <TuyaSmartUtil/TuyaSmartUtil.h>
 #import "TuyaSmartSweeperHistoryModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef NSString * TYSweeperCurrentPathKey;
+
+FOUNDATION_EXPORT TYSweeperCurrentPathKey const TYSweeperCurrentMapPathKey;
+FOUNDATION_EXPORT TYSweeperCurrentPathKey const TYSweeperCurrentRoutePathKey;
 
 @class TuyaSmartSweeper;
 @protocol TuyaSmartSweeperDelegate <NSObject>
@@ -16,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  扫地机数据通道的文件信息回调
  
- @param sweeper sweeper
+ @param sweeper instance
  @param devId 对应数据所属设备 Id
  @param mapType (0表示地图，1表示路径)
  @param mapPath 文件路径
@@ -26,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  扫地机数据通道的文件信息回调
  
- @param sweeper sweeper
+ @param sweeper instance
  @param devId 对应数据所属设备 Id
  @param message MQTT消息体
  */
@@ -37,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  需要提前设置 `shouldAutoDownloadData` = YES, 会自动根据返回的地图 url 请求下载数据
  
- @param sweeper 扫地机
+ @param sweeper instance
  @param devId 对应数据所属设备 Id
  @param mapType (0表示地图，1表示路径)
  @param mapData 地图数据
@@ -139,8 +145,18 @@ NS_ASSUME_NONNULL_BEGIN
  @param devId 设备 id
  @param complete 结果回调
  */
+- (void)getSweeperCurrentPathWithDevId:(NSString *)devId complete:(void(^)(NSString *mapPath, NSString *routePath, NSError * _Nullable error))complete __deprecated_msg("This method is deprecated, Use -[TuyaSmartSweeper getSweeperCurrentPathWithDevId:success:failure:] instead");
+
+/**
+ 获取实时的地图文件信息
+
+ @param devId 设备 id
+ @param success callback
+ @param failure callback
+ */
 - (void)getSweeperCurrentPathWithDevId:(NSString *)devId
-                              complete:(void(^)(NSString *mapPath, NSString *routePath, NSError * _Nullable error))complete;
+                               success:(void(^)(NSDictionary<TYSweeperCurrentPathKey, NSString *> *paths))success
+                               failure:(void(^)(NSError * _Nullable error))failure;
 
 /**
  删除扫地机历史记录

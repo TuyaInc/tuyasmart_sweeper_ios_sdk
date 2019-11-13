@@ -268,6 +268,8 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 ### 功能说明
 
+![image3](./imgs/img3.png)
+
 主要功能类为 `TuyaSmartFileDownload`，实现 `TuyaSmartFileDownloadDelegate` 来接收语音下载过程中的状态变化回调以及下载进度回调
 
 ```objective-c

@@ -1,5 +1,7 @@
 # Tuya Smart Sweeper iOS SDK
 
+[中文版](README-zh.md) | [English](README.md)
+
 ## Features Overview
 
 Tuya Smart Sweeper iOS SDK is based on the [Tuya Smart Home iOS SDK](https://github.com/TuyaInc/tuyasmart_home_ios_sdk)(The following introduction is: Home SDK), which expands the interface package for accessing the related functions of the sweeper device to speed up the development process. Mainly includes the following functions:

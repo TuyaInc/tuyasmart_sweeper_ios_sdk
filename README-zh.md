@@ -1,5 +1,7 @@
 # 涂鸦智能扫地机 iOS SDK 接入指南
 
+[中文版](README-zh.md) | [English](README.md)
+
 ## 功能概述
 
 涂鸦智能扫地机 iOS SDK 是在[涂鸦智能 iOS SDK](https://github.com/TuyaInc/tuyasmart_home_ios_sdk) （下文简介为: Home SDK）的基础上扩展了接入扫地机设备相关功能的接口封装，加速开发过程。主要包括了以下功能：

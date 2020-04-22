@@ -286,26 +286,7 @@ Swift:
 
 ### 数据流程
 
-```sequence
-
-Title: 地图流数据通信流程
-
-participant APP
-participant Device
-participant Server
-
-APP->Server: 订阅 mqtt 流数据通道
-Device->Server: 设备上报地图流数据
-Server-->APP: 通过流数据通道转发到 APP
-APP->APP: 根据地图流数据绘制地图
-
-Note over APP: 重新进入地图界面时
-
-APP->Server: APP 通过接口获取当前正在清扫的全量地图数据
-Server-->APP: 云端接口返回当前正在清扫的全量地图数据
-APP->APP: 根据设备上报的增量数据绘制地图
-
-```
+![MediaCleanRecord](./imgs/zh-hans/MediaCleanRecord.png)
 
 ### 功能简介
 
@@ -390,34 +371,7 @@ self.sweeperDevice.delegate = self;
 
 ### 数据流程
 
-```sequence
-
-Title: 激光型扫地机地图数据通信流程
-
-participant APP
-participant Device
-participant Server
-participant OSS/S3
-
-APP->Server: APP 通过接口获取文件（地图、清扫路径）存储的配置信息
-Server-->APP: 接口返回对应 OSS/S3 的云存储配置信息
-
-APP->OSS/S3: 获取当前正在清扫的（地图、清扫路径）文件
-OSS/S3-->APP: 返回 NSData 对象的（地图、清扫路径）数据
-APP->APP: 根据 NSData 数据绘制全量地图或清扫路径
-
-Device->Server: 1、获取文件（地图、清扫路径）存储的配置信息
-Server-->Device: 2、接口返回对应 OSS/S3 的云存储配置信息
-Device->OSS/S3: 3、上传地图清扫数据（地图、清扫路径）文件
-Device->Server: 4、上传完成之后，发送通知消息
-Server-->APP: 5、转发上传完成的消息到 APP
-APP->OSS/S3: 6、获取当前正在清扫的（地图、清扫路径）文件
-OSS/S3-->APP: 7、返回 NSData 对象的（地图、清扫路径）数据
-APP->APP: 8、根据 NSData 数据绘制全量地图或清扫路径
-
-```
-
-
+![MediaCleanRecord](./imgs/zh-hans/CleanRecord.png)
 
 ### 功能简介
 
@@ -773,33 +727,7 @@ self.sweeperDevice.delegate = self;
 
 ### 数据流程
 
-```sequence
-
-Title: 语音下载数据通信流程
-
-participant APP
-participant Device
-participant Server
-participant OSS/S3
-
-APP->Server: APP 通过接口拉取语音文件列表
-Server-->APP: 接口返回语音文件列表
-
-APP->Server: 1、通过接口确认下载指定文件
-Server->Device: 2、通过 mqtt 通知设备下载文件
-Device->Server: 3、通过接口获取文件下载地址
-Server-->Device: 4、接口返回文件下载地址
-Device->OSS/S3: 5、开始下载文件
-Device->Server: 6、通过 mqtt 上报文件下载进度和下载状态
-Server->APP: 7、通过 mqtt 转发文件下载进度和下载状态到 APP
-APP->APP: 8、缓存并展示下载进度
-
-Server->Server: 云端处理下载过程中的超时逻辑
-Server->APP: 推送超时状态给 APP
-
-```
-
-
+![MediaCleanRecord](./imgs/zh-hans/FileDownload.png)
 
 ### 功能简介
 

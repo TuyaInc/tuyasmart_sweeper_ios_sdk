@@ -292,26 +292,7 @@ Now all the prepare work has been completed. You can use the sdk to develop your
 
 ### Data flow
 
-```sequence
-
-Title: Map stream data communication process
-
-participant APP
-participant Device
-participant Server
-
-APP->Server: Subscribe to mqtt streaming data channel
-Device->Server: The device reports map stream data
-Server-->APP: Forward to APP via streaming data channel
-APP->APP: Draw a map based on map stream data
-
-Note over APP: When re-entering the map interface
-
-APP->Server: The APP obtains the full map data currently being cleaned through the interface
-Server-->APP: Cloud interface returns full map data currently being cleaned
-APP->APP: Draw a map based on the incremental data reported by the device
-
-```
+![MediaCleanRecord](./imgs/en/MediaCleanRecord.png)
 
 ### Function introduction
 
@@ -395,34 +376,7 @@ self.sweeperDevice.delegate = self;
 
 ### Data flow
 
-```sequence
-
-Title: Map data communication process of laser sweeper
-
-participant APP
-participant Device
-participant Server
-participant OSS/S3
-
-APP->Server: The APP obtains the configuration information stored in the file (map, sweeping path) from the server
-Server-->APP: Server returns the cloud storage configuration information corresponding to OSS / S3
-
-APP->OSS/S3: Get the file currently being cleaned (map, cleaning path)
-OSS/S3-->APP: Return data (map, sweep path) of NSData object
-APP->APP: Draw a full map or sweep path based on NSData data
-
-Device->Server: 1. Obtain the configuration information stored in the file (map, sweep path)
-Server-->Device: 2. The interface returns the cloud storage configuration information corresponding to OSS / S3
-Device->OSS/S3: 3. Upload the map cleaning data (map, cleaning path) file
-Device->Server: 4. After the upload is complete, send a notification message
-Server-->APP: 5. Forward the uploaded message to APP
-APP->OSS/S3: 6. Get the file (map, cleaning path) currently being cleaned
-OSS/S3-->APP: 7. Return the data (map, sweep path) of the NSData object
-APP->APP: 8. Draw a full-scale map or sweep path based on NSData data
-
-```
-
-
+![MediaCleanRecord](./imgs/en/CleanRecord.png)
 
 ### Function introduction
 
@@ -776,33 +730,7 @@ self.sweeperDevice.delegate = self;
 
 ### Data flow
 
-```sequence
-
-Title: Voice download data communication process
-
-participant APP
-participant Device
-participant Server
-participant OSS/S3
-
-APP->Server: APP request the list of voice files from the server
-Server-->APP: Server returns a list of voice files
-
-APP->Server: 1. Confirm to download the specified file through the interface
-Server->Device: 2.Notify the device to download files through mqtt
-Device->Server: 3. Obtain the file download address from the server
-Server-->Device: 4. Server returns the file download address
-Device->OSS/S3: 5. Start downloading files
-Device->Server: 6. Report the file download progress and download status through mqtt
-Server->APP: 7. Forward the file download progress and download status to the APP through mqtt
-APP->APP: 8. Cache and display download progress
-
-Server->Server: Server processing timeout logic in download process
-Server->APP: Push timeout status to APP
-
-```
-
-
+![MediaCleanRecord](./imgs/en/FileDownload.png)
 
 ### Function introduction
 

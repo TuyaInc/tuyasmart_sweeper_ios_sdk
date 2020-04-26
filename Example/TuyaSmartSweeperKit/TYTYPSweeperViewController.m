@@ -10,9 +10,9 @@
 #import <TuyaSmartSweeperKit/TuyaSmartSweeperKit.h>
 #import <TuyaSmartDeviceKit/TuyaSmartDeviceKit.h>
 
-@interface TYTYPSweeperViewController () <TuyaSmartSweeperDelegate>
+@interface TYTYPSweeperViewController () <TuyaSmartSweeperDeviceDelegate>
 
-@property (strong, nonatomic) TuyaSmartSweeper *sweeper;
+@property (strong, nonatomic) TuyaSmartSweeperDevice *sweeper;
 @property (copy, nonatomic) NSString *bucket;
 
 @end
@@ -24,85 +24,116 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+
+#pragma mark - Transfer
+
+- (void)testDataTransfer {
+    [self.sweeper subscribeDeviceDataTransfer];
+}
+
+
+
+#pragma mark - Laser Sweeper
+
+- (void)testLaserSweeper {
     
-    if (_deviceModel) {
-        self.title = _deviceModel.name;
+    __block NSString *sweeperBucket = nil;
+    // 1. download data from TuyaSmartSweeperDevice
+    self.sweeper.shouldAutoDownloadData = true;
+    
+    // 2.download data from NSURLSession
+//    self.sweeper.shouldAutoDownloadData = false;
+    
+    // init config
+    __weak __typeof(&*self) weakSelf = self;
+    [self.sweeper initCloudConfigWithSuccess:^(NSString * _Nonnull bucket) {
+        __strong __typeof(&*weakSelf) strongSelf = weakSelf;
         
-        NSString *devId = [_deviceModel.devId copy];
-        __weak __typeof(&*self) weakSelf = self;
-        // TODO: initialize
-        [self.sweeper initCloudConfigWithDevId:devId complete:^(NSString * _Nonnull bucket, NSError * _Nullable error) {
-            if (error == nil) {
-                weakSelf.bucket = bucket;
-                
-                // TODO: Get current map or path data's URL
-                [weakSelf.sweeper getSweeperCurrentPathWithDevId:devId success:^(NSDictionary<TYSweeperCurrentPathKey,NSString *> * _Nonnull paths) {
-                    __strong __typeof(&*weakSelf) strongSelf = weakSelf;
-                    
-                    // TODO: Get data from URL
-                    [strongSelf.sweeper getSweeperDataWithBucket:bucket path:paths[TYSweeperCurrentMapPathKey] complete:^(NSData * _Nonnull data, NSError * _Nullable error) {
-                        if (error == nil) {
-                            NSLog(@"current map data: %@", data);
-                            // TODO: draw map UI With data
-                        }
-                    }];
-                    
-                    [strongSelf.sweeper getSweeperDataWithBucket:bucket path:paths[TYSweeperCurrentRoutePathKey] complete:^(NSData * _Nonnull data, NSError * _Nullable error) {
-                        if (error == nil) {
-                            NSLog(@"route path data in current map: %@", data);
-                            // TODO: draw route UI With data
-                        }
-                    }];
-                    
-                } failure:^(NSError * _Nullable error) {
-                    
-                }];
+        sweeperBucket = bucket;
+        
+        [strongSelf.sweeper getSweeperCurrentPathWithSuccess:^(NSString * _Nonnull bucket, NSDictionary<TuyaSmartSweeperCurrentPathKey,NSString *> * _Nonnull paths) {
+            
+            NSString *mapPath = paths[TuyaSmartSweepCurrentMapPathKey];
+            NSString *routePath = paths[TuyaSmartSweepCurrentRoutePathKey];
+            
+            [strongSelf downloadDataWithBucket:sweeperBucket path:mapPath complete:^(NSData *data) {
+                NSLog(@"[LOG] laser device current sweeping data: %@", data);
+            }];
+        } failure:^(NSError * _Nullable error) {
+            
+        }];
+        
+    } failure:^(NSError * _Nullable error) {
+        
+    }];
+    
+    // history sweep data
+    [self.sweeper getSweeperHistoryDataWithLimit:50 offset:0 success:^(NSArray<TuyaSmartSweeperHistoryModel *> * _Nonnull datas, NSUInteger totalCount) {
+        __strong __typeof(&*weakSelf) strongSelf = weakSelf;
+
+        NSString *filePath = datas[0].file;
+        [strongSelf downloadDataWithBucket:sweeperBucket path:filePath complete:^(NSData *data) {
+            NSLog(@"[LOG] laser device current sweeping data: %@", data);
+        }];
+        
+    } failure:^(NSError * _Nullable error) {
+        
+        
+    }];
+    
+}
+
+- (void)downloadDataWithBucket:(NSString *)bucket path:(NSString *)path complete:(void(^)(NSData *))complete {
+    // 1. download data from TuyaSmartSweeperDevice
+    if (self.sweeper.shouldAutoDownloadData) {
+        
+        [self.sweeper getSweeperDataWithBucket:bucket path:path success:^(NSData * _Nonnull data) {
+            if (complete) {
+                complete(data);
+            }
+        } failure:^(NSError * _Nullable error) {
+            
+        }];
+    } else {
+        // 2.download data from NSURLSession
+        NSString *URLString = [self.sweeper getCloudFileDownloadURLWithBucket:bucket path:path];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            
+            NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+            if (statusCode == 200) {
+                if (complete) {
+                    complete(data);
+                }
             }
         }];
+        [task resume];
     }
 }
 
 
-#pragma mark - TuyaSmartSweeperDelegate
 
-// When the device running, recive data from mqtt
-- (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId message:(NSDictionary *)message {
-    
-    NSLog(@"recive mqtt messge from device: %@", message);
-    
-    // message[@"mapType"]
-    // message[@"mapType"] = 0: map data
-    // message[@"mapType"] = 1: route data
-    
-    // download map or route data from URL By NSURLSession
-    NSString *url = [sweeper getCloudFileUrlWithBucket:self.bucket path:message[@"mapPath"]];
-    [[NSURLSession sharedSession] downloadTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        // TODO: draw map or route UI With data
-    }];
-    
-    // download map or route data from URL By TuyaSmartSweeper
-//    [sweeper getSweeperDataWithBucket:self.bucket path:message[@"mapPath"] complete:^(NSData * _Nonnull data, NSError * _Nullable error) {
-//
-//        // TODO: draw map or route UI With data
-//    }];
-}
+#pragma mark - TuyaSmartSweeperDeviceDelegate
 
-// When the device running, recive data from mqtt
-- (void)sweeper:(TuyaSmartSweeper *)sweeper didReciveDataWithDevId:(NSString *)devId mapType:(NSInteger)mapType mapData:(NSData *)mapData error:(NSError *)error {
-    
-    NSLog(@"recive data from device: %ld %@", (long)mapType, mapData);
-    // mapType = 0: map data
-    // mapType = 1: route data
-    // TODO: draw map or route UI With data
+/**
+ * When received device stream data, the delegate will execute.
+ * 扫地机数据通道的流数据回调
+ *
+ * @param sweeperDevice instance
+ * @param data Received Data
+ */
+- (void)sweeperDevice:(TuyaSmartSweeperDevice *)sweeperDevice didReceiveStreamData:(NSData *)data {
+    NSLog(@"recive data transfer from device: %@", data);
 }
 
 
 #pragma mark - Getter
 
-- (TuyaSmartSweeper *)sweeper {
+- (TuyaSmartSweeperDevice *)sweeper {
     if (!_sweeper) {
-        _sweeper = [[TuyaSmartSweeper alloc] init];
+        _sweeper = [[TuyaSmartSweeperDevice alloc] initWithDeviceId:self.deviceModel.devId];
         _sweeper.delegate = self;
     }
     return _sweeper;

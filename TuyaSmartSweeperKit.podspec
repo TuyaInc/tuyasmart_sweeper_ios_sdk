@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'TuyaSmartSweeperKit'
-    s.version          = '1.0.7'
+    s.version          = '1.2.4'
     s.summary          = 'A short description of TuyaSmartSweeperKit.'
     s.description      = <<-DESC
     TODO: Add long description of the pod here.
@@ -9,10 +9,11 @@ Pod::Spec.new do |s|
     
     s.homepage         = 'https://github.com/TuyaInc/tuyasmart_sweeper_ios_sdk'
     s.license          = { :type => 'MIT' }
-    s.author           = { 'huangdaxia' => 'huangkai@tuya.com' }
-    s.source           = { :git => 'https://github.com/TuyaInc/tuyasmart_sweeper_ios_sdk.git', :tag => s.version.to_s }
-    s.ios.deployment_target = '8.0'
-    s.vendored_frameworks = 'ios/*.framework'
-    
+    s.authors          = { 'TuyaInc' => 'https://www.tuya.com' }
+    s.source           = { :http => "https://airtake-public-data-1254153901.cos.ap-shanghai.myqcloud.com/smart/app/package/sdk/ios/#{s.name}-#{s.version}.zip", :type => "zip" }
+    s.static_framework = true
+    s.ios.deployment_target = '9.0'
+    s.ios.vendored_framework = 'ios/*.framework'
+
     s.dependency 'TuyaSmartDeviceKit'
 end

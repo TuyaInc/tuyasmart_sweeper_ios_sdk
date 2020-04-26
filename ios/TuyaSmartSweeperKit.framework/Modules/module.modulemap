@@ -1,6 +1,0 @@
-framework module TuyaSmartSweeperKit {
-  umbrella header "TuyaSmartSweeperKit.h"
-
-  export *
-  module * { export * }
-}

@@ -23,7 +23,7 @@ PODS:
   - TuyaSmartSocketChannelKit (3.14.0):
     - CocoaAsyncSocket
     - TuyaSmartBaseKit
-  - TuyaSmartSweeperKit (1.0.7):
+  - TuyaSmartSweeperKit (1.2.4):
     - TuyaSmartDeviceKit
   - TuyaSmartUtil (3.14.8)
   - YYModel (1.0.4)
@@ -59,10 +59,10 @@ SPEC CHECKSUMS:
   TuyaSmartDeviceKit: afd76bf477e6a88cbe9eb18270c61fb94fd50264
   TuyaSmartMQTTChannelKit: d78d301516294239a3db96bc7b81b1e667d4a40d
   TuyaSmartSocketChannelKit: 286654a004f3b6f81b6c2277cab2cfac72a21156
-  TuyaSmartSweeperKit: 7fae187a32b2fb9bd40470ec228e3b9e7145e765
+  TuyaSmartSweeperKit: 291e59bf7a1ed7930c787293c810277d154f1733
   TuyaSmartUtil: a4370126ae4f182f6d3a63d8a35bb71938b2a91b
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
 PODFILE CHECKSUM: f6b8ed4560cd453d02b212f2705ada05091ebb53
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

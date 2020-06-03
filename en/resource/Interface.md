@@ -1,6 +1,6 @@
 ## Data Transfer Record Interface
 
-### 1. Get Latest Record
+### 1.Get Latest Record
 
 **API：** tuya.m.device.media.latest
 

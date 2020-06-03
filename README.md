@@ -2,6 +2,6 @@
 
 ---
 
-* [English](https://tuyainc.github.io/tuyasmart_panel_ios_sdk_doc/en/) 
-* [简体中文](https://tuyainc.github.io/tuyasmart_panel_ios_sdk_doc/zh-hans/) 
+* [English](https://tuyainc.github.io/tuyasmart_sweeper_ios_sdk/en/) 
+* [简体中文](https://tuyainc.github.io/tuyasmart_sweeper_ios_sdk/zh-hans/) 
 

@@ -1,58 +1,73 @@
-
+# Xcode
 #
-# TUYA iOS 仓库忽略配置清单
-#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-# OS X Finder 
-.DS_Store
-.hgignore
+## User settings
+xcuserdata/
 
-# Xcode per-user config
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
-*.pbxuser
-*.xcuserstate
-xcuserdata
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
 *.xccheckout
-*.pyc
-DerivedData
 
-# Build products
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 
-# 目前也加入版本控制，后期可能会有一些代码检测工具
-# builds/
-
-*.o
-*.LinkFileList
+## Obj-C/Swift specific
 *.hmap
-*.vscode
 
-# output
-Output/*  
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+.bundle
+.idea
 
-# Automatic backup files
-*~.nib/
-*.swp
-*~
-*.dat
-*.dep
-
-# Cocoapods 
-# 目前我们加入版本控制
-Pods
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+Pods/
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
 
 # Carthage
-# 目前我们加入版本控制
-# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
 
-# AppCode specific files
-.idea/
-*.iml
+Carthage/Build/
 
-# rn 环境
-ReactComponent/node_modules/
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
 
-# 后面按需补充 ...
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+#
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
+_book
+node_modules
+\.DS_Store

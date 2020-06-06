@@ -12,6 +12,8 @@
 | -------------------- | ---------------------- |
 | TuyaSmartSweepDevice | 涂鸦扫地机设备相关的类 |
 
+
+
 ### 获取云存储配置
 
 **接口说明**
@@ -46,6 +48,48 @@ Swift:
 
 ```swift
 sweeperDevice?.initCloudConfig(success: { (bucket) in
+            
+}, failure: { (error) in
+            
+})
+```
+
+
+
+### 更新云存储配置
+
+**接口说明**
+
+由于获取到的文件地址有时效性，当文件地址失效时，需要调用以下接口更新云配置
+
+```objective-c
+- (void)updateCloudConfigWithSuccess:(void (^)(NSString *bucket))success
+                             failure:(void (^)(NSError * _Nullable error))failure;
+```
+
+**参数说明**
+
+| 类名    | 说明                             |
+| ------- | -------------------------------- |
+| success | 成功回调（bucket：文件存储空间） |
+| failure | 失败回调                         |
+
+**示例代码**
+
+Objc:
+
+```objective-c
+[self.sweeperDevice updateCloudConfigWithSuccess:^(NSString * _Nonnull bucket) {
+        
+} failure:^(NSError * _Nullable error) {
+        
+}];
+```
+
+Swift:
+
+```swift
+sweeperDevice?.updateCloudConfig(success: { (bucket) in
             
 }, failure: { (error) in
             

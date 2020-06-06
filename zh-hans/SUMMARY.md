@@ -20,6 +20,7 @@
   * [数据流程](./resource/LaserSweeper.md#数据流程)
   * [功能简介](./resource/LaserSweeper.md#功能简介)
   * [获取云存储配置](./resource/LaserSweeper.md#获取云存储配置)
+  * [更新云存储配置](./resource/LaserSweeper.md#更新云存储配置)
   * [获取数据内容](./resource/LaserSweeper.md#获取数据内容)
   * [获取当前清扫中的数据内容](./resource/LaserSweeper.md#获取当前清扫中的数据内容)
   * [获取历史清扫记录](./resource/LaserSweeper.md#获取历史清扫记录)

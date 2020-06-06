@@ -12,6 +12,8 @@ The laser sweeper uses mqtt and cloud storage to transfer data, save the map or 
 | -------------------- | ------------------------------------ |
 | TuyaSmartSweepDevice | Tuya sweeper device management class |
 
+
+
 ### Initialize Cloud Configuration
 
 **Declaration**
@@ -46,6 +48,48 @@ Swift:
 
 ```swift
 sweeperDevice?.initCloudConfig(success: { (bucket) in
+            
+}, failure: { (error) in
+            
+})
+```
+
+
+
+### Update Cloud Configuration
+
+**Declaration**
+
+Due to the timeliness of the obtained file address, when the file address becomes invalid, you need to call this interface to update the cloud configuration
+
+```objective-c
+- (void)updateCloudConfigWithSuccess:(void (^)(NSString *bucket))success
+                             failure:(void (^)(NSError * _Nullable error))failure;
+```
+
+**Parameters**
+
+| Parameter | Description                                    |
+| --------- | ---------------------------------------------- |
+| success   | success callback（bucket：File storage space） |
+| failure   | failure callback                               |
+
+**Example**
+
+Objc:
+
+```objective-c
+[self.sweeperDevice updateCloudConfigWithSuccess:^(NSString * _Nonnull bucket) {
+        
+} failure:^(NSError * _Nullable error) {
+        
+}];
+```
+
+Swift:
+
+```swift
+sweeperDevice?.updateCloudConfig(success: { (bucket) in
             
 }, failure: { (error) in
             

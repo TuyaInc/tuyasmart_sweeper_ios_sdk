@@ -303,7 +303,7 @@ sweeperDevice?.removeSweeperHistoryData(withFileIds: [""], success: {
 
 
 
-### Clear Hstory Sweep Rcords
+### Clear History Sweep Rcords
 
 **Declaration**
 
@@ -345,7 +345,7 @@ sweeperDevice?.removeAllHistoryData(success: {
 
 
 
-### Get Hstorical Sweep Rcords (multi-map)
+### Get History Sweep Rcords (multi-map)
 
 **Declaration**
 

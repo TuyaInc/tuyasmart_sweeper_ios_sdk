@@ -1,9 +1,9 @@
 # Summary
 
 * [Features Overview](README.md)
-* [Preparation Work](./resource/Preparation.md) 
+* [Preparation for Integration](./resource/Preparation.md) 
 * [Integrate SDK](./resource/Integration.md)
-* [Gyroscope and Visual Sweeper]()
+* [Gyroscope and Visual Sweeper](./resource/GyroInterface/md)
   * [HTTPS Interface](./resource/Interface.md)
     * [Get Latest Record](./resource/Interface.md#1get-latest-record)
     * [Get Record List](./resource/Interface.md#2get-record-list)

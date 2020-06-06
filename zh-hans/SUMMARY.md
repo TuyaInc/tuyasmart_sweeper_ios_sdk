@@ -1,9 +1,9 @@
 # Summary
 
-* [前言](README.md)
+* [功能概述](README.md)
 * [准备工作](./resource/Preparation.md) 
-* [开始集成](./resource/Integration.md)
-* [陀螺仪和视觉扫地机]()
+* [集成 SDK](./resource/Integration.md)
+* [陀螺仪和视觉扫地机](./resource/GyroInterface/md)
   * [流数据通用接口](./resource/Interface.md)
     * [最新一次清扫记录](./resource/Interface.md#1最新一次清扫记录)
     * [历史清扫记录列表](./resource/Interface.md#2历史清扫记录列表)

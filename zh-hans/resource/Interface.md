@@ -1,4 +1,4 @@
-## 流数据清扫记录接口
+## 流数据通用接口
 
 流数据相关的接口采用通用接口形式调用，接口调用文档：[通用接口](https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/zh-hans/resource/CommonInterface.html)
 

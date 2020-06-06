@@ -3,7 +3,7 @@
 * [Features Overview](README.md)
 * [Preparation for Integration](./resource/Preparation.md) 
 * [Integrate SDK](./resource/Integration.md)
-* [Gyroscope and Visual Sweeper](./resource/GyroInterface/md)
+* [Gyroscope and Visual Sweeper](./resource/GyroInterface.md)
   * [HTTPS Interface](./resource/Interface.md)
     * [Get Latest Record](./resource/Interface.md#get-latest-record)
     * [Get Record List](./resource/Interface.md#get-record-list)

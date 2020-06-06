@@ -1,4 +1,4 @@
-## Data Transfer Record Interface
+## HTTPS Interface
 
 ### Get Latest Record
 

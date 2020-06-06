@@ -2,7 +2,7 @@
 
 流数据相关的接口采用通用接口形式调用，接口调用文档：[通用接口](https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/zh-hans/resource/CommonInterface.html)
 
-### 1. 最新一次清扫记录
+### 最新一次清扫记录
 
 **接口：** tuya.m.device.media.latest
 
@@ -53,7 +53,7 @@
 
 
 
-### 2.历史清扫记录列表
+### 历史清扫记录列表
 
 **接口：** m.smart.scale.history.get.list
 
@@ -107,7 +107,7 @@
 
 
 
-### 3.清扫记录详情
+### 清扫记录详情
 
 **接口：** tuya.m.device.media.detail
 
@@ -155,33 +155,7 @@
 
 
 
-### 4.删除清扫记录
-
-**接口：** m.smart.sweep.record.clear
-
-**版本：** 1.0
-
-**入参说明**
-
-| 字段名 | 类型   | 描述                                    |
-| ------ | ------ | --------------------------------------- |
-| devId  | String | 设备 Id                                 |
-| uuid   | String | 清扫记录 uuid，传 uuid 表示清除特定记录 |
-
-**响应示例**
-
-```json
-{
-    "result":true,
-    "t":1530589344923,
-    "success":true,
-    "status":"ok"
-}
-```
-
-
-
-### 5.清空历史清扫记录
+### 删除历史清扫记录
 
 **接口：** m.smart.scale.history.delete
 

@@ -1,6 +1,6 @@
 ## Data Transfer Record Interface
 
-### 1.Get Latest Record
+### Get Latest Record
 
 **API：** tuya.m.device.media.latest
 
@@ -51,7 +51,7 @@
 
 
 
-### 2.Get Record List
+### Get Record List
 
 **API：** m.smart.scale.history.get.list
 
@@ -105,7 +105,7 @@
 
 
 
-### 3.Get Record Detail
+### Get Record Detail
 
 **API：** tuya.m.device.media.detail
 
@@ -153,33 +153,7 @@
 
 
 
-### 4.Delete Records
-
-**API：** m.smart.sweep.record.clear
-
-**Version：** 1.0
-
-**Request parameters**
-
-| Parameter | Type   | Description                                                  |
-| --------- | ------ | ------------------------------------------------------------ |
-| devId     | String | Device Id                                                    |
-| uuid      | String | Clean the record uuid, pass uuid to clear the specific record |
-
-**Response Example**
-
-```json
-{
-    "result":true,
-    "t":1530589344923,
-    "success":true,
-    "status":"ok"
-}
-```
-
-
-
-### 5.Clear All History
+### Delete Record
 
 **API：** m.smart.scale.history.delete
 

@@ -98,6 +98,39 @@ sweeperDevice?.updateCloudConfig(success: { (bucket) in
 
 
 
+### 获取完整文件地址
+
+**接口说明**
+
+获取地图文件在 OSS/S3 服务器上完整的路径，可自行下载解析
+
+```objective-c
+- (nullable NSString *)getCloudFileDownloadURLWithBucket:(NSString *)bucket path:(NSString *)path;
+```
+
+**参数说明**
+
+| 参数   | 说明                               |
+| ------ | ---------------------------------- |
+| bucket | 文件存储空间                       |
+| path   | 文件（地图、清扫路径）存储相对路径 |
+
+**示例代码**
+
+Objc:
+
+```objective-c
+NSString *url = [self.sweeperDevice getCloudFileDownloadURLWithBucket:<#bucket#> path:<#path#>];
+```
+
+Swift:
+
+```swift
+let url = sweeperDevice?.getCloudFileDownloadURL(withBucket: "", path: "")
+```
+
+
+
 ### 获取数据内容
 
 **接口说明**
@@ -144,7 +177,7 @@ sweeperDevice?.getSweeperData(withBucket: "", path: "", success: { (data) in
 
 
 
-### 获取当前清扫中的数据内容
+### 获取当前清扫数据
 
 **接口说明**
 

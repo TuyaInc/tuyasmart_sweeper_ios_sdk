@@ -98,6 +98,39 @@ sweeperDevice?.updateCloudConfig(success: { (bucket) in
 
 
 
+### Get Full File URL
+
+**Declaration**
+
+Download file data according to the relative path of the file (map, sweep path) stored in the cloud (OSS / S3)
+
+```objective-c
+- (nullable NSString *)getCloudFileDownloadURLWithBucket:(NSString *)bucket path:(NSString *)path;
+```
+
+**Parameters**
+
+| Parameter | Description                                     |
+| --------- | ----------------------------------------------- |
+| bucket    | File storage space                              |
+| path      | File (map, sweeping path) storage relative path |
+
+**Example**
+
+Objc:
+
+```objective-c
+NSString *url = [self.sweeperDevice getCloudFileDownloadURLWithBucket:<#bucket#> path:<#path#>];
+```
+
+Swift:
+
+```swift
+let url = sweeperDevice?.getCloudFileDownloadURL(withBucket: "", path: "")
+```
+
+
+
 ### Get Data Content
 
 **Declaration**

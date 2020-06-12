@@ -20,6 +20,7 @@
   * [Function introduction](./resource/LaserSweeper.md#function-introduction)
   * [Initialize Cloud Configuration](./resource/LaserSweeper.md#initialize-cloud-configuration)
   * [Update Cloud Configuration](./resource/LaserSweeper.md#update-cloud-configuration)
+  * [Get Full File URL](./resource/LaserSweeper.md#get-full-file-url)
   * [Get Data Content](./resource/LaserSweeper.md#get-data-content)
   * [Get the Data Content of Current Cleaning](./resource/LaserSweeper.md#get-the-data-content-of-current-cleaning)
   * [Get History Sweep Records](./resource/LaserSweeper.md#get-history-sweep-records)

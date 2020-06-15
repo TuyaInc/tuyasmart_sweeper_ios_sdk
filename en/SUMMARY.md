@@ -15,7 +15,7 @@
     * [Subscribe Data Stream](./resource/GyroSweeper.md#subscribe-data-stream)
     * [Unsubscribe Data Stream](./resource/GyroSweeper.md#unsubscribe-data-stream)
     * [Data Stream Callback](./resource/GyroSweeper.md#data-stream-callback)
-* [Laser Sweeper Interface](./resource/LaserSweeper.md)
+* [Laser Sweeper](./resource/LaserSweeper.md)
   * [Data Flow](./resource/LaserSweeper.md#data-flow)
   * [Function introduction](./resource/LaserSweeper.md#function-introduction)
   * [Initialize Cloud Configuration](./resource/LaserSweeper.md#initialize-cloud-configuration)

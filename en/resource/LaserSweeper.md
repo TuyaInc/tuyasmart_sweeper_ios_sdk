@@ -1,4 +1,4 @@
-## Laser Sweeper Interface
+## Laser Sweeper
 
 ### Data flow
 

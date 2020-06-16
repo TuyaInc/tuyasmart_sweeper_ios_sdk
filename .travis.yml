@@ -23,4 +23,4 @@ deploy:
   github-token: $GH_TOKEN
   local-dir: _book
   on:
-    branch: gh-pages
+    branch: doc

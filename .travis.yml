@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+  - "10"
+
+before_install:
+  - export TZ='Asia/Shanghai'
+
+install:
+  - npm install -g gitbook-cli
+  - gitbook install
+
+script:
+  - gitbook build
+
+branches:
+  only:
+    - doc
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  local-dir: _book
+  on:
+    branch: gh-pages

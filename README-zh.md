@@ -77,7 +77,7 @@ Swift:
 
 ## 开发文档
 
-更多请参考：[涂鸦智能扫地机 iOS SDK 开发文档](https://tuyainc.github.io/tuyasmart_sweeper_ios_sdk/zh-hans/)
+更多请参考：[涂鸦智能扫地机 iOS SDK 开发文档](https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/zh-hans/resource/Sweeper.html)
 
 
 

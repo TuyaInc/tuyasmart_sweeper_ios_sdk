@@ -83,7 +83,7 @@ Now all the prepare work has been completed. You can use the sdk to develop your
 
 ## Doc
 
-Refer to details：[Tuya Smart Sweeper SDK - iOS](https://tuyainc.github.io/tuyasmart_sweeper_ios_sdk/en/)
+Refer to details：[Tuya Smart Sweeper SDK - iOS](https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/en/resource/Sweeper.html)
 
 
 

@@ -1,5 +1,11 @@
 ## Change Log
 
+### 1.2.5 (2020-07-04)
+
+Dependency `pod 'TuyaSmartDeviceKit'`
+
+- [Feature] ：New extended attributes for voice download
+
 ### 1.2.4 (2020-04-26)
 
 Dependency `pod 'TuyaSmartDeviceKit'`

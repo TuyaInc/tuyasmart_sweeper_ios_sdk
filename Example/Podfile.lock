@@ -1,5 +1,6 @@
 PODS:
   - CocoaAsyncSocket (7.6.4)
+  - Masonry (1.1.0)
   - MBProgressHUD (0.9.2)
   - MQTTClient (0.15.2):
     - MQTTClient/Core (= 0.15.2)
@@ -9,37 +10,70 @@ PODS:
   - MQTTClient/Manager (0.15.2):
     - MQTTClient/Min
   - MQTTClient/Min (0.15.2)
+  - Reachability (3.2)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
   - SDWebImage/Core (4.4.8)
-  - TuyaSmartBaseKit (3.15.0):
+  - TuyaSmartActivatorKit (3.17.6):
+    - TuyaSmartDeviceKit
+  - TuyaSmartBaseKit (3.17.6):
     - TuyaSmartUtil
     - YYModel
-  - TuyaSmartDeviceKit (3.15.0):
+  - TuyaSmartDemo/AddDevice (0.8.2):
+    - Masonry
+    - SDWebImage
+    - TuyaSmartActivatorKit
+    - TuyaSmartDemo/Base
+  - TuyaSmartDemo/Base (0.8.2):
+    - MBProgressHUD (~> 0.9.2)
+    - Reachability
+    - TuyaSmartBaseKit
+    - YYModel
+  - TuyaSmartDemo/DeviceList (0.8.2):
+    - SDWebImage
+    - TuyaSmartDemo/Base
+    - TuyaSmartDeviceKit
+  - TuyaSmartDemo/Login (0.8.2):
+    - TuyaSmartBaseKit
+    - TuyaSmartDemo/Base
+  - TuyaSmartDemo/UserInfo (0.8.2):
+    - TuyaSmartDemo/Base
+  - TuyaSmartDeviceKit (3.17.11):
     - TuyaSmartBaseKit
     - TuyaSmartMQTTChannelKit
     - TuyaSmartSocketChannelKit
-  - TuyaSmartMQTTChannelKit (3.15.0):
+  - TuyaSmartMQTTChannelKit (3.17.3):
     - MQTTClient (= 0.15.2)
     - TuyaSmartBaseKit
-  - TuyaSmartSocketChannelKit (3.15.1):
+  - TuyaSmartSocketChannelKit (3.17.6):
     - CocoaAsyncSocket
     - TuyaSmartBaseKit
-  - TuyaSmartSweeperKit (1.2.4):
+  - TuyaSmartSweeperKit (1.2.5):
     - TuyaSmartDeviceKit
-  - TuyaSmartUtil (3.15.0)
+  - TuyaSmartUtil (3.17.6)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - MBProgressHUD (~> 0.9.2)
   - SDWebImage/Core (~> 4.4.3)
-  - TuyaSmartSweeperKit (= 1.2.4)
+  - TuyaSmartDemo/AddDevice
+  - TuyaSmartDemo/Base
+  - TuyaSmartDemo/DeviceList
+  - TuyaSmartDemo/Login
+  - TuyaSmartDemo/UserInfo
+  - TuyaSmartSweeperKit
 
 SPEC REPOS:
   trunk:
     - CocoaAsyncSocket
+    - Masonry
     - MBProgressHUD
     - MQTTClient
+    - Reachability
     - SDWebImage
+    - TuyaSmartActivatorKit
     - TuyaSmartBaseKit
+    - TuyaSmartDemo
     - TuyaSmartDeviceKit
     - TuyaSmartMQTTChannelKit
     - TuyaSmartSocketChannelKit
@@ -49,17 +83,21 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MQTTClient: 902c7bcac1501595f3d0b15178c7205b40331fb0
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
-  TuyaSmartBaseKit: 092976a46a86697a24265e520324606e3d8d7139
-  TuyaSmartDeviceKit: 8a10dccbd8ba9b91d5723e493863ca2bb3a50e23
-  TuyaSmartMQTTChannelKit: 59926addc1c210e6dac40d79cbc829726c5bde60
-  TuyaSmartSocketChannelKit: 50082d7fb42d357e47a4a46ce36ebd8b7660ecf2
-  TuyaSmartSweeperKit: 291e59bf7a1ed7930c787293c810277d154f1733
-  TuyaSmartUtil: fede5b89a5e0cb62806f752b4337eed3daac45d1
+  TuyaSmartActivatorKit: a3a648c209046bf2fb6efb362fb82c0b6c075638
+  TuyaSmartBaseKit: 7450992991c7ccff63d28b2994d9d08202b63e3e
+  TuyaSmartDemo: febd147902591efd9cc4a8cbbc101bdb46eaf777
+  TuyaSmartDeviceKit: 7649464a184017f5f35450c80c652bc83cf77a17
+  TuyaSmartMQTTChannelKit: 40c98e2123e4c855c62fc6827052b6c63592058c
+  TuyaSmartSocketChannelKit: 49ae6cf90449fc8c9fb1e1735abd8f9e94314fe8
+  TuyaSmartSweeperKit: be3ad5b9dab48a8ca19c78537d099365beb61854
+  TuyaSmartUtil: f29791576de8ab7f6cd6c60f0bb57985924a36eb
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 532e5eccf146c27c3dfcfc8ba314d7c230117eeb
+PODFILE CHECKSUM: 85445170fff90b6ed9dcb7bfe9e036b04461d965
 
 COCOAPODS: 1.9.1

@@ -4,7 +4,16 @@ source 'https://cdn.cocoapods.org/'
 platform :ios, '9.0'
 
 target 'TuyaSmartSweeperKit_Example' do
+  use_frameworks!
   pod 'TuyaSmartSweeperKit'
+  
+  pod 'TuyaSmartDemo', :subspecs => [
+    'Base',
+    'Login',
+    'DeviceList',
+    'AddDevice',
+    'UserInfo'
+  ]
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'SDWebImage/Core', '~> 4.4.3'
 

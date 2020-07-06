@@ -19,13 +19,9 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		B2F7824F8A398260CCCBCED1 /* libPods-TuyaSmartSweeperKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DAEEFE7CEEC95F6E169A2D0 /* libPods-TuyaSmartSweeperKit_Tests.a */; };
-		D01C614F0B9EC1E70BBBA1F4 /* libPods-TuyaSmartSweeperKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D7A28FEA06F95759BB4E69 /* libPods-TuyaSmartSweeperKit_Example.a */; };
-		E5FB3C90240769D700F9C472 /* TYPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FB3C8D240769D700F9C472 /* TYPLoginViewController.xib */; };
-		E5FB3C91240769D700F9C472 /* TYPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB3C8F240769D700F9C472 /* TYPLoginViewController.m */; };
-		E5FB3C9924076A1600F9C472 /* TYPDeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB3C9224076A1500F9C472 /* TYPDeviceListViewController.m */; };
-		E5FB3C9A24076A1600F9C472 /* TYPSmartHomeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB3C9524076A1500F9C472 /* TYPSmartHomeManager.m */; };
-		E5FB3C9B24076A1600F9C472 /* TYDeviceListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB3C9824076A1600F9C472 /* TYDeviceListViewCell.m */; };
+		C1F6665F11567E675BA00E16 /* Pods_TuyaSmartSweeperKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E4A81654CD3D089EDC658B /* Pods_TuyaSmartSweeperKit_Tests.framework */; };
+		E505F58624B30014001006A7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E505F58524B30014001006A7 /* File.swift */; };
+		E50DA7E8F355D3A556FA17D2 /* Pods_TuyaSmartSweeperKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B35D6D5026F44C513A8FA /* Pods_TuyaSmartSweeperKit_Example.framework */; };
 		E5FB3C9D24076AC300F9C472 /* t_s.bmp in Resources */ = {isa = PBXBuildFile; fileRef = E5FB3C9C24076AC300F9C472 /* t_s.bmp */; };
 		E5FB3CA324076D5900F9C472 /* TYTYPSweeperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FB3CA224076D5900F9C472 /* TYTYPSweeperViewController.m */; };
 /* End PBXBuildFile section */
@@ -41,9 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D7A28FEA06F95759BB4E69 /* libPods-TuyaSmartSweeperKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartSweeperKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E4CEC02ABBF77668984150 /* TuyaSmartSweeperKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TuyaSmartSweeperKit.podspec; path = ../TuyaSmartSweeperKit.podspec; sourceTree = "<group>"; };
-		0DAEEFE7CEEC95F6E169A2D0 /* libPods-TuyaSmartSweeperKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartSweeperKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C57CD9C83E2BDD1AA485C60 /* Pods-TuyaSmartSweeperKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartSweeperKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-TuyaSmartSweeperKit_Example/Pods-TuyaSmartSweeperKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* TuyaSmartSweeperKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuyaSmartSweeperKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,18 +59,13 @@
 		6C94C3A1E95FB21A93AD89AD /* Pods-TuyaSmartSweeperKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartSweeperKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-TuyaSmartSweeperKit_Tests/Pods-TuyaSmartSweeperKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		754E1ADF37945E41630EF469 /* Pods-TuyaSmartSweeperKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartSweeperKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TuyaSmartSweeperKit_Tests/Pods-TuyaSmartSweeperKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E2EB26A037A82046DB25D42 /* Pods-TuyaSmartSweeperKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartSweeperKit_Example.release.xcconfig"; path = "Target Support Files/Pods-TuyaSmartSweeperKit_Example/Pods-TuyaSmartSweeperKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A0E4A81654CD3D089EDC658B /* Pods_TuyaSmartSweeperKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuyaSmartSweeperKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B717B4F1F93FCC5F291E32 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B66B35D6D5026F44C513A8FA /* Pods_TuyaSmartSweeperKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuyaSmartSweeperKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D272138A9817B6DFE7430478 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E5FB3C8D240769D700F9C472 /* TYPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TYPLoginViewController.xib; sourceTree = "<group>"; };
-		E5FB3C8E240769D700F9C472 /* TYPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPLoginViewController.h; sourceTree = "<group>"; };
-		E5FB3C8F240769D700F9C472 /* TYPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPLoginViewController.m; sourceTree = "<group>"; };
-		E5FB3C9224076A1500F9C472 /* TYPDeviceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPDeviceListViewController.m; sourceTree = "<group>"; };
-		E5FB3C9324076A1500F9C472 /* TYPSmartHomeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPSmartHomeManager.h; sourceTree = "<group>"; };
-		E5FB3C9424076A1500F9C472 /* TYDeviceListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDeviceListViewCell.h; sourceTree = "<group>"; };
-		E5FB3C9524076A1500F9C472 /* TYPSmartHomeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPSmartHomeManager.m; sourceTree = "<group>"; };
+		E505F58424B30014001006A7 /* TuyaSmartSweeperKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuyaSmartSweeperKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		E505F58524B30014001006A7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		E5FB3C9624076A1600F9C472 /* TYUserDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYUserDefine.h; sourceTree = "<group>"; };
-		E5FB3C9724076A1600F9C472 /* TYPDeviceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPDeviceListViewController.h; sourceTree = "<group>"; };
-		E5FB3C9824076A1600F9C472 /* TYDeviceListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDeviceListViewCell.m; sourceTree = "<group>"; };
 		E5FB3C9C24076AC300F9C472 /* t_s.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = t_s.bmp; sourceTree = "<group>"; };
 		E5FB3CA124076D5900F9C472 /* TYTYPSweeperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTYPSweeperViewController.h; sourceTree = "<group>"; };
 		E5FB3CA224076D5900F9C472 /* TYTYPSweeperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTYPSweeperViewController.m; sourceTree = "<group>"; };
@@ -90,7 +79,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				D01C614F0B9EC1E70BBBA1F4 /* libPods-TuyaSmartSweeperKit_Example.a in Frameworks */,
+				E50DA7E8F355D3A556FA17D2 /* Pods_TuyaSmartSweeperKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +90,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				B2F7824F8A398260CCCBCED1 /* libPods-TuyaSmartSweeperKit_Tests.a in Frameworks */,
+				C1F6665F11567E675BA00E16 /* Pods_TuyaSmartSweeperKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +125,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				00D7A28FEA06F95759BB4E69 /* libPods-TuyaSmartSweeperKit_Example.a */,
-				0DAEEFE7CEEC95F6E169A2D0 /* libPods-TuyaSmartSweeperKit_Tests.a */,
+				B66B35D6D5026F44C513A8FA /* Pods_TuyaSmartSweeperKit_Example.framework */,
+				A0E4A81654CD3D089EDC658B /* Pods_TuyaSmartSweeperKit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,18 +134,16 @@
 		6003F593195388D20070C39A /* Example for TuyaSmartSweeperKit */ = {
 			isa = PBXGroup;
 			children = (
-				E5FB3CA42407BB1B00F9C472 /* Login */,
-				E5FB3CA52407BB2700F9C472 /* Device */,
 				6003F59C195388D20070C39A /* TYAppDelegate.h */,
 				6003F59D195388D20070C39A /* TYAppDelegate.m */,
 				E5FB3CA124076D5900F9C472 /* TYTYPSweeperViewController.h */,
 				E5FB3CA224076D5900F9C472 /* TYTYPSweeperViewController.m */,
-				E5FB3C9324076A1500F9C472 /* TYPSmartHomeManager.h */,
-				E5FB3C9524076A1500F9C472 /* TYPSmartHomeManager.m */,
 				E5FB3C9624076A1600F9C472 /* TYUserDefine.h */,
+				E505F58524B30014001006A7 /* File.swift */,
 				E5FB3C9C24076AC300F9C472 /* t_s.bmp */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				E505F58424B30014001006A7 /* TuyaSmartSweeperKit_Example-Bridging-Header.h */,
 			);
 			name = "Example for TuyaSmartSweeperKit";
 			path = TuyaSmartSweeperKit;
@@ -213,27 +200,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E5FB3CA42407BB1B00F9C472 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				E5FB3C8E240769D700F9C472 /* TYPLoginViewController.h */,
-				E5FB3C8F240769D700F9C472 /* TYPLoginViewController.m */,
-				E5FB3C8D240769D700F9C472 /* TYPLoginViewController.xib */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		E5FB3CA52407BB2700F9C472 /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				E5FB3C9424076A1500F9C472 /* TYDeviceListViewCell.h */,
-				E5FB3C9824076A1600F9C472 /* TYDeviceListViewCell.m */,
-				E5FB3C9724076A1600F9C472 /* TYPDeviceListViewController.h */,
-				E5FB3C9224076A1500F9C472 /* TYPDeviceListViewController.m */,
-			);
-			name = Device;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,6 +212,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				0E662C7E1F095437A761A77B /* [CP] Copy Pods Resources */,
+				37960C645D72084898CA4EBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,6 +254,7 @@
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = 94JFPTRDN5;
+						LastSwiftMigration = 1150;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -298,6 +266,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -317,7 +286,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5FB3C90240769D700F9C472 /* TYPLoginViewController.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				E5FB3C9D24076AC300F9C472 /* t_s.bmp in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -342,15 +310,139 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TuyaSmartSweeperKit_Example/Pods-TuyaSmartSweeperKit_Example-resources.sh",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/cell_view_arrow@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/cell_view_arrow@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/customColor.plist",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/en.lproj/Localizable.strings",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/en.lproj/TPViewsLocalizable.strings",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/phoneCodeList.plist",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/tp_top_bar_back@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/tp_top_bar_back@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/tysmart_selected@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/tysmart_selected@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_about@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_about@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_about_active@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_about_active@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_add@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_add@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_add_active@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_add_active@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_devicelist@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_devicelist@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_devicelist_active@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/ty_mainbt_devicelist_active@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/zh-Hans.lproj/Localizable.strings",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/zh-Hans.lproj/TPViewsLocalizable.strings",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/en.lproj",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/Base/Assets/zh-Hans.lproj",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/power_off@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/power_off@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/power_on@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/power_on@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_devicelist_dot_gray@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_devicelist_dot_gray@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_devicelist_dot_green@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_devicelist_dot_green@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_devicelist_share_gray@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_devicelist_share_gray@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_devicelist_share_green@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_devicelist_share_green@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_list_empty@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_list_empty@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_panel_arrows@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_panel_arrows@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_panel_minus@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_panel_minus@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_panel_plus@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_panel_plus@3x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_panel_select@2x.png",
+				"${PODS_ROOT}/TuyaSmartDemo/TuyaSmartDemo/Classes/DeviceList/Assets/ty_panel_select@3x.png",
 				"${PODS_ROOT}/TuyaSmartUtil/ios/TuyaSmartUtil.framework/Versions/A/Resources/TuyaSmartUtil.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cell_view_arrow@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cell_view_arrow@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/customColor.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Localizable.strings",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TPViewsLocalizable.strings",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/phoneCodeList.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tp_top_bar_back@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tp_top_bar_back@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tysmart_selected@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tysmart_selected@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_about@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_about@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_about_active@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_about_active@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_add@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_add@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_add_active@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_add_active@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_devicelist@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_devicelist@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_devicelist_active@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_mainbt_devicelist_active@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/power_off@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/power_off@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/power_on@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/power_on@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_devicelist_dot_gray@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_devicelist_dot_gray@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_devicelist_dot_green@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_devicelist_dot_green@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_devicelist_share_gray@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_devicelist_share_gray@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_devicelist_share_green@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_devicelist_share_green@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_list_empty@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_list_empty@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_panel_arrows@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_panel_arrows@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_panel_minus@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_panel_minus@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_panel_plus@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_panel_plus@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_panel_select@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ty_panel_select@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TuyaSmartUtil.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaSmartSweeperKit_Example/Pods-TuyaSmartSweeperKit_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37960C645D72084898CA4EBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuyaSmartSweeperKit_Example/Pods-TuyaSmartSweeperKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MQTTClient/MQTTClient.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MQTTClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaSmartSweeperKit_Example/Pods-TuyaSmartSweeperKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC0CB4417027511A8CEB3D2D /* [CP] Check Pods Manifest.lock */ = {
@@ -404,12 +496,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5FB3C91240769D700F9C472 /* TYPLoginViewController.m in Sources */,
 				6003F59E195388D20070C39A /* TYAppDelegate.m in Sources */,
+				E505F58624B30014001006A7 /* File.swift in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				E5FB3C9B24076A1600F9C472 /* TYDeviceListViewCell.m in Sources */,
-				E5FB3C9A24076A1600F9C472 /* TYPSmartHomeManager.m in Sources */,
-				E5FB3C9924076A1600F9C472 /* TYPDeviceListViewController.m in Sources */,
 				E5FB3CA324076D5900F9C472 /* TYTYPSweeperViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,13 +619,17 @@
 			baseConfigurationReference = 5C57CD9C83E2BDD1AA485C60 /* Pods-TuyaSmartSweeperKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 94JFPTRDN5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TuyaSmartSweeperKit/TuyaSmartSweeperKit-Prefix.pch";
 				INFOPLIST_FILE = "TuyaSmartSweeperKit/TuyaSmartSweeperKit-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.your.bundleId;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TuyaSmartSweeperKit/TuyaSmartSweeperKit_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -547,13 +640,16 @@
 			baseConfigurationReference = 9E2EB26A037A82046DB25D42 /* Pods-TuyaSmartSweeperKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 94JFPTRDN5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TuyaSmartSweeperKit/TuyaSmartSweeperKit-Prefix.pch";
 				INFOPLIST_FILE = "TuyaSmartSweeperKit/TuyaSmartSweeperKit-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.your.bundleId;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TuyaSmartSweeperKit/TuyaSmartSweeperKit_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -563,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 754E1ADF37945E41630EF469 /* Pods-TuyaSmartSweeperKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -588,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C94C3A1E95FB21A93AD89AD /* Pods-TuyaSmartSweeperKit_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",

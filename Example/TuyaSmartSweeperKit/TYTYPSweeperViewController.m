@@ -83,6 +83,11 @@
         
     }];
     
+    [self.sweeper getFileDownloadInfoWithLimit:50 offset:0 success:^(NSArray<TuyaSmartFileDownloadModel *> * _Nonnull upgradeFileList, NSUInteger totalCount) {
+        
+    } failure:^(NSError * _Nullable error) {
+        
+    }];
 }
 
 - (void)downloadDataWithBucket:(NSString *)bucket path:(NSString *)path complete:(void(^)(NSData *))complete {

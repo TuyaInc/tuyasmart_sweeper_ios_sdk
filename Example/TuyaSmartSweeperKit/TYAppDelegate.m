@@ -9,46 +9,42 @@
 #import "TYAppDelegate.h"
 #import <TuyaSmartBaseKit/TuyaSmartBaseKit.h>
 #import "TYUserDefine.h"
-#import "TYPLoginViewController.h"
-#import "TYPDeviceListViewController.h"
+#import "TYTYPSweeperViewController.h"
+#import "TYDemoConfiguration.h"
+#import "TPDemoUtils.h"
+#import "TYDemoApplicationImpl.h"
+#import "TYDemoSmartHomeManager.h"
+
+@interface TYAppDelegate () <TYDemoPanelControlProtocol>
+
+@end
 
 @implementation TYAppDelegate
-{
-    UINavigationController *_rootVc;
+
+#pragma mark - TYDemoPanelControlProtocol
+
+- (void)gotoPanelControlDevice:(TuyaSmartDeviceModel * _Nullable )device group:(TuyaSmartGroupModel * _Nullable)group {
+
+    TYTYPSweeperViewController *vc = [TYTYPSweeperViewController new];
+    vc.deviceModel = device;
+    [tp_topMostViewController().navigationController pushViewController:vc animated:true];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
 #if DEBUG
     [[TuyaSmartSDK sharedInstance] setDebugMode:YES];
 #endif
     
-    [[TuyaSmartSDK sharedInstance] startWithAppKey:SDK_APPKEY secretKey:SDK_APPSECRET];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[TYPDeviceListViewController new]];
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
-    
-    _rootVc = navigationController;
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(showLoginVc)
-                                                 name:TuyaSmartUserNotificationUserSessionInvalid
-                                               object:nil];
-    
-    if (![TuyaSmartUser sharedInstance].isLogin) {
-        [self showLoginVc];
-    }
+    [[TYDemoConfiguration sharedInstance] registService:@protocol(TYDemoPanelControlProtocol) withImpl:self];
+    TYDemoConfigModel *config = [[TYDemoConfigModel alloc] init];
+    config.appKey = SDK_APPKEY;
+    config.secretKey = SDK_APPSECRET;
     
     // Override point for customization after application launch.
-    return YES;
-}
-
-- (void)showLoginVc {
-    TYPLoginViewController *loginVc = [[TYPLoginViewController alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVc];
-    [_rootVc presentViewController:nav animated:YES completion:nil];
+    return [[TYDemoApplicationImpl sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions config:config];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

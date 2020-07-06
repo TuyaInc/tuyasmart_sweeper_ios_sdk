@@ -83,5 +83,5 @@ Swift:
 
 ## 版本更新记录
 
-[ChangeLog.md](./ChangeLog.md) 
+[ChangeLog.md](https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/zh-hans/resource/SweeperChangeLog.html) 
 

@@ -89,5 +89,5 @@ Refer to details：[Tuya Smart Sweeper SDK - iOS](https://tuyainc.github.io/tuya
 
 ## ChangeLog
 
-[ChangeLog.md](./ChangeLog.md) 
+[ChangeLog.md](https://tuyainc.github.io/tuyasmart_home_ios_sdk_doc/en/resource/SweeperChangeLog.html) 
 

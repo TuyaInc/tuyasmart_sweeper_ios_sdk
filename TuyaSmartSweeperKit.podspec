@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'TuyaSmartSweeperKit'
-    s.version          = '1.2.5'
+    s.version          = '1.2.6'
     s.summary          = 'A short description of TuyaSmartSweeperKit.'
     s.description      = <<-DESC
     TODO: Add long description of the pod here.
